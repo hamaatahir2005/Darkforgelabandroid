@@ -1,0 +1,62 @@
+flowchart TD
+  N0["SerialManager.getSerialPorts"]
+  N1["ISerialManager.getSerialPorts"]
+  N0 -->|observed-client-call| N1
+  N2["SerialService.getSerialPorts"]
+  N1 -.->|inferred-generated-binder-dispatch| N2
+  N3["ISerialManager.Stub.getSerialPorts_enforcePermission"]
+  N2 -->|observed-explicit-helper-call| N3
+  N4["PermissionEnforcer.enforcePermission"]
+  N3 -.->|inferred-generated-permission-helper| N4
+  N5["ports.add(path);"]
+  N2 -->|observed-operation| N5
+  N6["SerialManager.openSerialPort"]
+  N7["ISerialManager.openSerialPort"]
+  N6 -->|observed-client-call| N7
+  N8["SerialService.openSerialPort"]
+  N7 -.->|inferred-generated-binder-dispatch| N8
+  N9["ISerialManager.Stub.openSerialPort_enforcePermission"]
+  N8 -->|observed-explicit-helper-call| N9
+  N9 -.->|inferred-generated-permission-helper| N4
+  N10["return supplier.get();"]
+  N8 -->|observed-operation| N10
+  N11["ConsumerIrManager.transmit"]
+  N12["IConsumerIrService.transmit"]
+  N11 -->|observed-client-call| N12
+  N13["ConsumerIrService.transmit"]
+  N12 -.->|inferred-generated-binder-dispatch| N13
+  N14["IConsumerIrService.Stub.transmit_enforcePermission"]
+  N13 -->|observed-explicit-helper-call| N14
+  N14 -.->|inferred-generated-permission-helper| N4
+  N15["mAidlService.transmit(carrierFrequency, pattern);"]
+  N13 -->|observed-operation| N15
+  N16["int err = halTransmit(carrierFrequency, pattern);"]
+  N13 -->|observed-operation| N16
+  N17["ConsumerIrManager.getCarrierFrequencies"]
+  N18["IConsumerIrService.getCarrierFrequencies"]
+  N17 -->|observed-client-call| N18
+  N19["ConsumerIrService.getCarrierFrequencies"]
+  N18 -.->|inferred-generated-binder-dispatch| N19
+  N20["IConsumerIrService.Stub.getCarrierFrequencies_enforcePermission"]
+  N19 -->|observed-explicit-helper-call| N20
+  N20 -.->|inferred-generated-permission-helper| N4
+  N21["ConsumerIrFreqRange[] output = mAidlService.getCarrierFreqs();"]
+  N19 -->|observed-operation| N21
+  N22["return halGetCarrierFrequencies();"]
+  N19 -->|observed-operation| N22
+  N23["ConsumerIrManager.hasIrEmitter"]
+  N24["IConsumerIrService.hasIrEmitter"]
+  N23 -->|observed-client-call| N24
+  N25["ConsumerIrService.hasIrEmitter"]
+  N24 -.->|inferred-generated-binder-dispatch| N25
+  N26["return mHasNativeHal;"]
+  N25 -->|observed-operation| N26
+  N27["SerialService.Lifecycle.onStart"]
+  N28["SerialManagerInternal.addVirtualSerialPortForTest"]
+  N27 -->|observed-local-registration-and-interface; not Binder dispatch| N28
+  N29["SerialManagerInternal.removeVirtualSerialPortForTest"]
+  N27 -->|observed-local-registration-and-interface; not Binder dispatch| N29
+  N30["tryOpen(serialPort) [configured supplier only; virtual target unresolved]"]
+  N10 -->|observed-configured-supplier-lambda| N30
+  N31["Os.open(path, O_RDWR | O_NOCTTY)"]
+  N30 -->|observed-native-open-call| N31

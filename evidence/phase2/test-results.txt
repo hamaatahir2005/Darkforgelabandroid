@@ -1,0 +1,51 @@
+test_all_requested_record_fields (test_callgraph.CallGraphTest.test_all_requested_record_fields) ... ok
+test_bounded_export_generates_evidence_and_requested_report (test_callgraph.CallGraphTest.test_bounded_export_generates_evidence_and_requested_report) ... ok
+test_comment_and_string_occurrences_do_not_become_calls (test_callgraph.CallGraphTest.test_comment_and_string_occurrences_do_not_become_calls) ... ok
+test_conditional_guard_does_not_pass_first_statement_invariant (test_callgraph.CallGraphTest.test_conditional_guard_does_not_pass_first_statement_invariant) ... ok
+test_every_citation_resolves_to_exact_pinned_line (test_callgraph.CallGraphTest.test_every_citation_resolves_to_exact_pinned_line) ... ok
+test_four_guards_are_first_statement_before_all_selected_sinks (test_callgraph.CallGraphTest.test_four_guards_are_first_statement_before_all_selected_sinks) ... ok
+test_generated_edges_are_inferred_and_runtime_cases_not_executed (test_callgraph.CallGraphTest.test_generated_edges_are_inferred_and_runtime_cases_not_executed) ... ok
+test_intentional_no_permission_query_is_not_missing_guard (test_callgraph.CallGraphTest.test_intentional_no_permission_query_is_not_missing_guard) ... ok
+test_local_routes_have_same_process_evidence (test_callgraph.CallGraphTest.test_local_routes_have_same_process_evidence) ... ok
+test_negative_mutation_guard_after_sink_is_not_accepted (test_callgraph.CallGraphTest.test_negative_mutation_guard_after_sink_is_not_accepted) ... ok
+test_nine_hits_reclassified_with_exact_original_lines (test_callgraph.CallGraphTest.test_nine_hits_reclassified_with_exact_original_lines) ... ok
+test_no_local_identity_clear_or_denial_catch_in_selected_entries (test_callgraph.CallGraphTest.test_no_local_identity_clear_or_denial_catch_in_selected_entries) ... ok
+test_overloaded_method_disambiguation (test_callgraph.CallGraphTest.test_overloaded_method_disambiguation) ... ok
+test_pinned_sources_include_service_aidl_and_generator (test_callgraph.CallGraphTest.test_pinned_sources_include_service_aidl_and_generator) ... ok
+test_positive_control_guard_before_sink (test_callgraph.CallGraphTest.test_positive_control_guard_before_sink) ... ok
+test_safe_models_report_expected_actual_and_mutation_controls (test_callgraph.CallGraphTest.test_safe_models_report_expected_actual_and_mutation_controls) ... ok
+test_source_tampering_fails_before_graph_analysis (test_callgraph.CallGraphTest.test_source_tampering_fails_before_graph_analysis) ... ok
+test_valid_but_unexpected_baseline_is_rejected (test_callgraph.CallGraphTest.test_valid_but_unexpected_baseline_is_rejected) ... ok
+test_acquire_does_not_overwrite (test_lab.LabTest.test_acquire_does_not_overwrite) ... ok
+test_all_log_formats (test_lab.LabTest.test_all_log_formats) ... ok
+test_aosp_results_do_not_claim_vulnerabilities (test_lab.LabTest.test_aosp_results_do_not_claim_vulnerabilities) ... ok
+test_confirmation_is_not_an_allowed_review_state (test_lab.LabTest.test_confirmation_is_not_an_allowed_review_state) ... ok
+test_crash_signature_normalizes_address (test_lab.LabTest.test_crash_signature_normalizes_address) ... ok
+test_dashboard_auth_search_and_host_guard (test_lab.LabTest.test_dashboard_auth_search_and_host_guard) ... skipped 'Environment denies socket creation; in-memory HTTP protocol tested separately'
+test_dedup_preserves_occurrences_review_and_commit (test_lab.LabTest.test_dedup_preserves_occurrences_review_and_commit) ... ok
+test_extra_source_rejected (test_lab.LabTest.test_extra_source_rejected) ... ok
+test_file_size_limit (test_lab.LabTest.test_file_size_limit) ... ok
+test_five_rule_categories_and_unconfirmed (test_lab.LabTest.test_five_rule_categories_and_unconfirmed) ... ok
+test_http_protocol_without_socket (test_lab.LabTest.test_http_protocol_without_socket) ... ok
+test_literal_search_and_locations (test_lab.LabTest.test_literal_search_and_locations) ... ok
+test_local_models_are_scoped_and_pass (test_lab.LabTest.test_local_models_are_scoped_and_pass) ... ok
+test_memory_limit_is_enforced (test_lab.LabTest.test_memory_limit_is_enforced) ... ok
+test_offline_dashboard_embeds_safe_data_and_search (test_lab.LabTest.test_offline_dashboard_embeds_safe_data_and_search) ... ok
+test_offline_dashboard_javascript_search_and_filter (test_lab.LabTest.test_offline_dashboard_javascript_search_and_filter) ... ok
+test_online_ref_resolution_and_hash (test_lab.LabTest.test_online_ref_resolution_and_hash) ... ok
+test_path_traversal_and_symlink_rejected (test_lab.LabTest.test_path_traversal_and_symlink_rejected) ... ok
+test_pdf_multiple_pages_and_literal_escaping (test_lab.LabTest.test_pdf_multiple_pages_and_literal_escaping) ... ok
+test_real_semgrep_when_available (test_lab.LabTest.test_real_semgrep_when_available) ... skipped 'Semgrep is not installed; real engine integration not verified'
+test_reports_evidence_escaping_and_pdf (test_lab.LabTest.test_reports_evidence_escaping_and_pdf) ... ok
+test_semgrep_adapter_parses_results_without_claiming_real_execution (test_lab.LabTest.test_semgrep_adapter_parses_results_without_claiming_real_execution) ... ok
+test_semgrep_errors_fail_closed (test_lab.LabTest.test_semgrep_errors_fail_closed) ... ok
+test_semgrep_missing_explicit_and_auto (test_lab.LabTest.test_semgrep_missing_explicit_and_auto) ... ok
+test_source_provenance_exact_blob (test_lab.LabTest.test_source_provenance_exact_blob) ... ok
+test_tamper_rejected (test_lab.LabTest.test_tamper_rejected) ... ok
+test_wall_timeout_kills_worker (test_lab.LabTest.test_wall_timeout_kills_worker) ... ok
+test_worker_search_and_validation (test_lab.LabTest.test_worker_search_and_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 3.284s
+
+OK (skipped=2)

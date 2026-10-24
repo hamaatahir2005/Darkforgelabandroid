@@ -1,0 +1,72 @@
+{
+  "repository": "aosp-mirror/platform_frameworks_base",
+  "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+  "acquisition": "connected GitHub fetch_file at immutable commit; exact Git blob verified",
+  "files": [
+    {
+      "path": "services/core/java/com/android/server/SerialService.java",
+      "git_blob_sha": "95ae11e282185624eae66cc936e7826b1b3268cd",
+      "sha256": "cc1b3165fc30fc0bfe1e66304c8ef37d6a720052522ba5a5166e3f08ab49fb62"
+    },
+    {
+      "path": "services/core/java/com/android/server/ConsumerIrService.java",
+      "git_blob_sha": "8362079b9009304eee5e5507d0a6ff9f7c4492c2",
+      "sha256": "d2c339f784883b3a6c1bb64d4f332207e189998e9171ee06534a7f06e7006fe0"
+    },
+    {
+      "path": "core/java/android/hardware/ISerialManager.aidl",
+      "git_blob_sha": "65a0fa4f893e0a0d6941b97489050c1ad9d3b480",
+      "sha256": "3feba1a2ce1316a977df099704e2bbe1273d08685b98a5474f582af59b50c348"
+    },
+    {
+      "path": "core/java/android/hardware/IConsumerIrService.aidl",
+      "git_blob_sha": "930c73f0ae4450cf4b18438149549859dadbdc61",
+      "sha256": "6c8b0961040e2409b9afa12085151a6ff963abf8dafbd68313544cf79cfd27f3"
+    },
+    {
+      "path": "core/java/android/hardware/SerialManager.java",
+      "git_blob_sha": "e2ce7230a79658e744d20045b3659c9e0d957547",
+      "sha256": "4ed31e5ffac704306dc620bcd948c7574dd8445bcea77f09cad840909e521832"
+    },
+    {
+      "path": "core/java/android/hardware/ConsumerIrManager.java",
+      "git_blob_sha": "6f589cd9190ba3de560bfb9e06cec0e707ba713a",
+      "sha256": "7b94705b7a4fdd12b702bb45dc131bf341f14d519618e61e80ee5a13ef2d6856"
+    },
+    {
+      "path": "core/java/android/hardware/SerialManagerInternal.java",
+      "git_blob_sha": "9132da06aeacfe3df703b7d645903e059f80dc0d",
+      "sha256": "e31caee3c8365a6c80d4bae7d0d4896159fd1abfdcf4dd78591d66e56f1289f6"
+    },
+    {
+      "path": "core/res/AndroidManifest.xml",
+      "git_blob_sha": "2371c3e15e93c3a832349d959f8a1a392ac71291",
+      "sha256": "336cc3ed0c0182b9a6d9345f6003e042285b9bfbd67d74c5c5959d01186280fc"
+    },
+    {
+      "path": "services/java/com/android/server/SystemServer.java",
+      "git_blob_sha": "5b13da74238f56d332616963304182a080618229",
+      "sha256": "fc4d8fe6fac0f283ba23ee713dae8d595ca7752faeee6fa230253def6ffe600d"
+    },
+    {
+      "path": "services/core/java/com/android/server/SystemService.java",
+      "git_blob_sha": "4de85fe9f2ff415c34b3e393e11c3beee30f6b9f",
+      "sha256": "7cf211e2aec2a3d1be0d6a3e9f3314f81e0b76daf7d0b555cca39d484bfd945b"
+    },
+    {
+      "path": "core/java/android/os/Binder.java",
+      "git_blob_sha": "86dc20c497e6a97edbfed731aa0628f31c370889",
+      "sha256": "7c01fdf9046862c00c9b4d34d9fd461bcab1cb99803269fd86b7bcc581e48ec4"
+    },
+    {
+      "path": "core/java/com/android/server/LocalServices.java",
+      "git_blob_sha": "2a10918a51619047dd54b4b63f3d7bb189d127b8",
+      "sha256": "e5fc2868e8997e6a963396c6519891392543919211b8212d2328d334e4807e3e"
+    },
+    {
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "git_blob_sha": "3cc6fb5ad0ef422241a31809dc0f526e953cb46d",
+      "sha256": "eabca7065cb5ca2d8586c95f5ad6095395e9639c096d23f64f51ac871efd93f9"
+    }
+  ]
+}

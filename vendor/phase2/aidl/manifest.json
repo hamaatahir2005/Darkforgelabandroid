@@ -1,0 +1,12 @@
+{
+  "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+  "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+  "acquisition": "connected GitHub fetch_file at immutable commit; exact Git blob verified",
+  "files": [
+    {
+      "path": "generate_java_binder.cpp",
+      "git_blob_sha": "47044e39bdf55d7db7f93b19c0f159647b94a961",
+      "sha256": "3611e768dc0e63944675dc43070b4b6f791c22ab9295cf0e96c1f308172d909e"
+    }
+  ]
+}

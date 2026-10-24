@@ -13,6 +13,7 @@ jobs:
           python-version: '3.12'
       - run: sh scripts/test.sh
       - run: python3 scripts/acceptance.py
+      - run: python3 scripts/phase2.py
       - uses: actions/upload-artifact@v4
         with:
           name: darkforge-research-evidence

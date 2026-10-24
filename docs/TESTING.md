@@ -16,3 +16,10 @@ PATH="$PWD/.venv/bin:$PATH" python3 -m darkforge --db work/semgrep.sqlite scan v
 ```
 
 A real optional integration test also runs automatically when `semgrep` is on PATH. It requires all five rule categories on the synthetic corpus. Semgrep errors fail the job instead of silently falling back or presenting a partial scan as complete.
+
+
+## Phase-two checks
+
+The suite also verifies pinned service/AIDL/compiler evidence; all required review fields; four explicit first-statement guards before selected sinks; the intentional RequiresNoPermission query; declaration/invocation separation excluding comments/strings; overloads; positive/negative source-order controls and conditional-guard rejection; exception/identity observations; every citation's exact line and excerpt; inferred generated edges; unexecuted Android runtime plans; same-process local routes; five expected/actual model cases with two deliberately faulty controls; tamper rejection; unexpected revision rejection; and bounded graph/report export.
+
+`python3 scripts/phase2.py` reproduces `AOSP_CALL_GRAPH_REVIEW.md` and phase-two JSON/Mermaid evidence. The five Python model cases pass locally; all Android runtime cases explicitly remain NOT RUN. No emulator, AIDL compiler, Java compiler, device or external target service is used.

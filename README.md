@@ -4,6 +4,20 @@ A practical Python 3 Android source security research lab. Works offline with a 
 
 **No independently validated AOSP vulnerability is claimed.** Static matches are review hints. All imported findings start `unconfirmed`; synthetic validation never promotes them. Confidence describes pattern relevance, not exploitability or severity.
 
+## Phase two: Binder/AIDL service call-graph review
+
+Read the complete [AOSP_CALL_GRAPH_REVIEW.md](AOSP_CALL_GRAPH_REVIEW.md). It traces `SerialService` and `ConsumerIrService`: five Binder methods, four explicit permission-helper calls before protected operations, one intentional no-permission capability query, and two same-process SerialManagerInternal methods.
+
+The original nine matches are classified as **two declarations and seven invocations**, not vulnerabilities. Generated dispatch/UID/PID edges are explicitly inferred from a separately pinned AIDL compiler reference; exact build-manifest matching and Android runtime validation remain missing. All possible security weaknesses remain **Unconfirmed**.
+
+```sh
+python3 scripts/phase2.py
+# Or generate to a chosen output directory:
+python3 -m darkforge callgraph --source vendor/phase2 --destination work/phase2
+```
+
+See [graph and evidence JSON](evidence/phase2/callgraph.json), [Mermaid graph](evidence/phase2/callgraph.mmd), [phase-two test output](evidence/phase2/test-results.txt), and the [safe Android runtime test plan](docs/PHASE2_RUNTIME_PLAN.md). The phase-two source corpus is provided in the checkout; a wheel installation needs an explicit `--source /path/to/vendor/phase2`.
+
 ## Quick start from an Android-controlled cloud terminal
 
 Requires Linux/POSIX and Python 3.11+; the core has no pip dependencies. Run from the repository directory:

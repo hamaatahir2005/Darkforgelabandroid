@@ -5,6 +5,9 @@ import sys
 
 
 def dispatch(action, p):
+    if action == 'callgraph':
+        from .callgraph import export
+        return export(**p)
     if action == 'scan':
         from .scanner import scan
         return scan(**p)

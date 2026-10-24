@@ -1,0 +1,1784 @@
+{
+  "schema_version": 1,
+  "scope": "Two selected services; five Binder interface methods and two local methods. Not exhaustive AOSP discovery.",
+  "frameworks_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+  "generator_reference_commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+  "generator_reference_limitation": "Historical AOSP compiler source is separately pinned; NOT proven to be the exact compiler of the frameworks build. Generated Stub files absent.",
+  "manifests": {
+    "frameworks": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "acquisition": "connected GitHub fetch_file at immutable commit; exact Git blob verified",
+      "files": [
+        {
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "git_blob_sha": "95ae11e282185624eae66cc936e7826b1b3268cd",
+          "sha256": "cc1b3165fc30fc0bfe1e66304c8ef37d6a720052522ba5a5166e3f08ab49fb62"
+        },
+        {
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "git_blob_sha": "8362079b9009304eee5e5507d0a6ff9f7c4492c2",
+          "sha256": "d2c339f784883b3a6c1bb64d4f332207e189998e9171ee06534a7f06e7006fe0"
+        },
+        {
+          "path": "core/java/android/hardware/ISerialManager.aidl",
+          "git_blob_sha": "65a0fa4f893e0a0d6941b97489050c1ad9d3b480",
+          "sha256": "3feba1a2ce1316a977df099704e2bbe1273d08685b98a5474f582af59b50c348"
+        },
+        {
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "git_blob_sha": "930c73f0ae4450cf4b18438149549859dadbdc61",
+          "sha256": "6c8b0961040e2409b9afa12085151a6ff963abf8dafbd68313544cf79cfd27f3"
+        },
+        {
+          "path": "core/java/android/hardware/SerialManager.java",
+          "git_blob_sha": "e2ce7230a79658e744d20045b3659c9e0d957547",
+          "sha256": "4ed31e5ffac704306dc620bcd948c7574dd8445bcea77f09cad840909e521832"
+        },
+        {
+          "path": "core/java/android/hardware/ConsumerIrManager.java",
+          "git_blob_sha": "6f589cd9190ba3de560bfb9e06cec0e707ba713a",
+          "sha256": "7b94705b7a4fdd12b702bb45dc131bf341f14d519618e61e80ee5a13ef2d6856"
+        },
+        {
+          "path": "core/java/android/hardware/SerialManagerInternal.java",
+          "git_blob_sha": "9132da06aeacfe3df703b7d645903e059f80dc0d",
+          "sha256": "e31caee3c8365a6c80d4bae7d0d4896159fd1abfdcf4dd78591d66e56f1289f6"
+        },
+        {
+          "path": "core/res/AndroidManifest.xml",
+          "git_blob_sha": "2371c3e15e93c3a832349d959f8a1a392ac71291",
+          "sha256": "336cc3ed0c0182b9a6d9345f6003e042285b9bfbd67d74c5c5959d01186280fc"
+        },
+        {
+          "path": "services/java/com/android/server/SystemServer.java",
+          "git_blob_sha": "5b13da74238f56d332616963304182a080618229",
+          "sha256": "fc4d8fe6fac0f283ba23ee713dae8d595ca7752faeee6fa230253def6ffe600d"
+        },
+        {
+          "path": "services/core/java/com/android/server/SystemService.java",
+          "git_blob_sha": "4de85fe9f2ff415c34b3e393e11c3beee30f6b9f",
+          "sha256": "7cf211e2aec2a3d1be0d6a3e9f3314f81e0b76daf7d0b555cca39d484bfd945b"
+        },
+        {
+          "path": "core/java/android/os/Binder.java",
+          "git_blob_sha": "86dc20c497e6a97edbfed731aa0628f31c370889",
+          "sha256": "7c01fdf9046862c00c9b4d34d9fd461bcab1cb99803269fd86b7bcc581e48ec4"
+        },
+        {
+          "path": "core/java/com/android/server/LocalServices.java",
+          "git_blob_sha": "2a10918a51619047dd54b4b63f3d7bb189d127b8",
+          "sha256": "e5fc2868e8997e6a963396c6519891392543919211b8212d2328d334e4807e3e"
+        },
+        {
+          "path": "core/java/android/os/PermissionEnforcer.java",
+          "git_blob_sha": "3cc6fb5ad0ef422241a31809dc0f526e953cb46d",
+          "sha256": "eabca7065cb5ca2d8586c95f5ad6095395e9639c096d23f64f51ac871efd93f9"
+        }
+      ]
+    },
+    "aidl": {
+      "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+      "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+      "acquisition": "connected GitHub fetch_file at immutable commit; exact Git blob verified",
+      "files": [
+        {
+          "path": "generate_java_binder.cpp",
+          "git_blob_sha": "47044e39bdf55d7db7f93b19c0f159647b94a961",
+          "sha256": "3611e768dc0e63944675dc43070b4b6f791c22ab9295cf0e96c1f308172d909e"
+        }
+      ]
+    }
+  },
+  "services": [
+    {
+      "id": "SerialService.getSerialPorts",
+      "service_name": "SerialService",
+      "entry_point": "ISerialManager.getSerialPorts",
+      "caller_identity": "Expected generated helper reads Binder getCallingPid()/getCallingUid(); not an observed runtime identity",
+      "required_permission": "android.permission.SERIAL_PORT",
+      "enforcement_location": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/SerialService.java",
+        "line": 89,
+        "excerpt": "super.getSerialPorts_enforcePermission();",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L89"
+      },
+      "protected_operation": [
+        "ports.add(path)"
+      ],
+      "source_file_and_line": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/SerialService.java",
+        "line": 88,
+        "excerpt": "public String[] getSerialPorts() {",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L88"
+      },
+      "aidl_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "aosp_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "confidence_level": {
+        "observed_source": "high",
+        "generated_dispatch_and_identity": "medium; inferred, compiler revision not build-manifest matched",
+        "vulnerability": "not assessed as established"
+      },
+      "validation_status": "Unconfirmed \u2014 Android runtime/emulator unavailable; source observations only",
+      "recommended_next_step": "Generate the actual Stub from a resolved build manifest, then run authorized in-process Binder deny/allow tests with a fake sink; no serial/IR hardware calls.",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ISerialManager.aidl",
+          "line": 25,
+          "excerpt": "@EnforcePermission(\"SERIAL_PORT\")",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ISerialManager.aidl#L25"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ISerialManager.aidl",
+          "line": 26,
+          "excerpt": "String[] getSerialPorts();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ISerialManager.aidl#L26"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/SerialManager.java",
+          "line": 55,
+          "excerpt": "return mService.getSerialPorts();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/SerialManager.java#L55"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 88,
+          "excerpt": "public String[] getSerialPorts() {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L88"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 89,
+          "excerpt": "super.getSerialPorts_enforcePermission();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L89"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/res/AndroidManifest.xml",
+          "line": 7133,
+          "excerpt": "<permission android:name=\"android.permission.SERIAL_PORT\"",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/res/AndroidManifest.xml#L7133"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 95,
+          "excerpt": "ports.add(path);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L95"
+        }
+      ],
+      "security_analysis": {
+        "permission_before_operation": {
+          "helper_is_first_statement": true,
+          "helper_invocations": 1,
+          "protected_calls": 1,
+          "helper_before_all_protected_calls": true,
+          "limitation": "Source order in selected method only; not a whole-program control-flow dominance proof"
+        },
+        "caller_identity": "Expected generated helper reads Binder getCallingPid()/getCallingUid(); not an observed runtime identity",
+        "identity_management": {
+          "observed_clear_or_restore_calls": [],
+          "conclusion": "No explicit identity transition in this selected method body"
+        },
+        "exception_handling": {
+          "catch_types": [],
+          "conclusion": "No catch around the initial permission helper; IR RemoteException catches surround later HAL calls only"
+        },
+        "permission_suitability": "SERIAL_PORT is signature|privileged and matches port access",
+        "alternate_routes": "Direct Java calls to the same override still execute its explicit helper. LocalServices mutation API is analyzed separately. Uninspected callers are not excluded."
+      },
+      "runtime_test_cases": [
+        {
+          "case": "negative: caller without required permission",
+          "expected": "SecurityException and zero fake-sink operations",
+          "actual": "NOT RUN",
+          "status": "unconfirmed"
+        },
+        {
+          "case": "positive: authorized caller",
+          "expected": "Expected fake-sink operation/return, with Binder UID/PID recorded",
+          "actual": "NOT RUN",
+          "status": "unconfirmed"
+        }
+      ]
+    },
+    {
+      "id": "SerialService.openSerialPort",
+      "service_name": "SerialService",
+      "entry_point": "ISerialManager.openSerialPort",
+      "caller_identity": "Expected generated helper reads Binder getCallingPid()/getCallingUid(); not an observed runtime identity",
+      "required_permission": "android.permission.SERIAL_PORT",
+      "enforcement_location": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/SerialService.java",
+        "line": 104,
+        "excerpt": "super.openSerialPort_enforcePermission();",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L104"
+      },
+      "protected_operation": [
+        "supplier.get()"
+      ],
+      "source_file_and_line": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/SerialService.java",
+        "line": 103,
+        "excerpt": "public ParcelFileDescriptor openSerialPort(String path) {",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L103"
+      },
+      "aidl_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "aosp_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "confidence_level": {
+        "observed_source": "high",
+        "generated_dispatch_and_identity": "medium; inferred, compiler revision not build-manifest matched",
+        "vulnerability": "not assessed as established"
+      },
+      "validation_status": "Unconfirmed \u2014 Android runtime/emulator unavailable; source observations only",
+      "recommended_next_step": "Generate the actual Stub from a resolved build manifest, then run authorized in-process Binder deny/allow tests with a fake sink; no serial/IR hardware calls.",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ISerialManager.aidl",
+          "line": 29,
+          "excerpt": "@EnforcePermission(\"SERIAL_PORT\")",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ISerialManager.aidl#L29"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ISerialManager.aidl",
+          "line": 30,
+          "excerpt": "ParcelFileDescriptor openSerialPort(String name);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ISerialManager.aidl#L30"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/SerialManager.java",
+          "line": 77,
+          "excerpt": "ParcelFileDescriptor pfd = mService.openSerialPort(name);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/SerialManager.java#L77"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 103,
+          "excerpt": "public ParcelFileDescriptor openSerialPort(String path) {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L103"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 104,
+          "excerpt": "super.openSerialPort_enforcePermission();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L104"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/res/AndroidManifest.xml",
+          "line": 7133,
+          "excerpt": "<permission android:name=\"android.permission.SERIAL_PORT\"",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/res/AndroidManifest.xml#L7133"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 109,
+          "excerpt": "return supplier.get();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L109"
+        }
+      ],
+      "security_analysis": {
+        "permission_before_operation": {
+          "helper_is_first_statement": true,
+          "helper_invocations": 1,
+          "protected_calls": 2,
+          "helper_before_all_protected_calls": true,
+          "limitation": "Source order in selected method only; not a whole-program control-flow dominance proof"
+        },
+        "caller_identity": "Expected generated helper reads Binder getCallingPid()/getCallingUid(); not an observed runtime identity",
+        "identity_management": {
+          "observed_clear_or_restore_calls": [],
+          "conclusion": "No explicit identity transition in this selected method body"
+        },
+        "exception_handling": {
+          "catch_types": [],
+          "conclusion": "No catch around the initial permission helper; IR RemoteException catches surround later HAL calls only"
+        },
+        "permission_suitability": "SERIAL_PORT is signature|privileged and matches port access",
+        "alternate_routes": "Direct Java calls to the same override still execute its explicit helper. LocalServices mutation API is analyzed separately. Uninspected callers are not excluded."
+      },
+      "runtime_test_cases": [
+        {
+          "case": "negative: caller without required permission",
+          "expected": "SecurityException and zero fake-sink operations",
+          "actual": "NOT RUN",
+          "status": "unconfirmed"
+        },
+        {
+          "case": "positive: authorized caller",
+          "expected": "Expected fake-sink operation/return, with Binder UID/PID recorded",
+          "actual": "NOT RUN",
+          "status": "unconfirmed"
+        }
+      ]
+    },
+    {
+      "id": "ConsumerIrService.transmit",
+      "service_name": "ConsumerIrService",
+      "entry_point": "IConsumerIrService.transmit",
+      "caller_identity": "Expected generated helper reads Binder getCallingPid()/getCallingUid(); not an observed runtime identity",
+      "required_permission": "android.permission.TRANSMIT_IR",
+      "enforcement_location": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/ConsumerIrService.java",
+        "line": 101,
+        "excerpt": "super.transmit_enforcePermission();",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L101"
+      },
+      "protected_operation": [
+        "mAidlService.transmit(",
+        "halTransmit(carrierFrequency, pattern)"
+      ],
+      "source_file_and_line": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/ConsumerIrService.java",
+        "line": 100,
+        "excerpt": "public void transmit(String packageName, int carrierFrequency, int[] pattern) {",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L100"
+      },
+      "aidl_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "aosp_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "confidence_level": {
+        "observed_source": "high",
+        "generated_dispatch_and_identity": "medium; inferred, compiler revision not build-manifest matched",
+        "vulnerability": "not assessed as established"
+      },
+      "validation_status": "Unconfirmed \u2014 Android runtime/emulator unavailable; source observations only",
+      "recommended_next_step": "Generate the actual Stub from a resolved build manifest, then run authorized in-process Binder deny/allow tests with a fake sink; no serial/IR hardware calls.",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 25,
+          "excerpt": "@EnforcePermission(\"TRANSMIT_IR\")",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L25"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 26,
+          "excerpt": "void transmit(String packageName, int carrierFrequency, in int[] pattern);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L26"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ConsumerIrManager.java",
+          "line": 84,
+          "excerpt": "mService.transmit(mPackageName, carrierFrequency, pattern);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ConsumerIrManager.java#L84"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 100,
+          "excerpt": "public void transmit(String packageName, int carrierFrequency, int[] pattern) {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L100"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 101,
+          "excerpt": "super.transmit_enforcePermission();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L101"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/res/AndroidManifest.xml",
+          "line": 2773,
+          "excerpt": "<permission android:name=\"android.permission.TRANSMIT_IR\"",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/res/AndroidManifest.xml#L2773"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 122,
+          "excerpt": "mAidlService.transmit(carrierFrequency, pattern);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L122"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 127,
+          "excerpt": "int err = halTransmit(carrierFrequency, pattern);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L127"
+        }
+      ],
+      "security_analysis": {
+        "permission_before_operation": {
+          "helper_is_first_statement": true,
+          "helper_invocations": 1,
+          "protected_calls": 2,
+          "helper_before_all_protected_calls": true,
+          "limitation": "Source order in selected method only; not a whole-program control-flow dominance proof"
+        },
+        "caller_identity": "Expected generated helper reads Binder getCallingPid()/getCallingUid(); not an observed runtime identity",
+        "identity_management": {
+          "observed_clear_or_restore_calls": [],
+          "conclusion": "No explicit identity transition in this selected method body"
+        },
+        "exception_handling": {
+          "catch_types": [
+            "RemoteException"
+          ],
+          "conclusion": "No catch around the initial permission helper; IR RemoteException catches surround later HAL calls only"
+        },
+        "permission_suitability": "TRANSMIT_IR is normal and matches IR use; normal protection is not a bypass",
+        "alternate_routes": "AIDL HAL and native fallback occur after the helper. No alternate external route established within this slice; HAL/runtime policy outside scope."
+      },
+      "runtime_test_cases": [
+        {
+          "case": "negative: caller without required permission",
+          "expected": "SecurityException and zero fake-sink operations",
+          "actual": "NOT RUN",
+          "status": "unconfirmed"
+        },
+        {
+          "case": "positive: authorized caller",
+          "expected": "Expected fake-sink operation/return, with Binder UID/PID recorded",
+          "actual": "NOT RUN",
+          "status": "unconfirmed"
+        }
+      ]
+    },
+    {
+      "id": "ConsumerIrService.getCarrierFrequencies",
+      "service_name": "ConsumerIrService",
+      "entry_point": "IConsumerIrService.getCarrierFrequencies",
+      "caller_identity": "Expected generated helper reads Binder getCallingPid()/getCallingUid(); not an observed runtime identity",
+      "required_permission": "android.permission.TRANSMIT_IR",
+      "enforcement_location": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/ConsumerIrService.java",
+        "line": 139,
+        "excerpt": "super.getCarrierFrequencies_enforcePermission();",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L139"
+      },
+      "protected_operation": [
+        "mAidlService.getCarrierFreqs()",
+        "halGetCarrierFrequencies()"
+      ],
+      "source_file_and_line": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/ConsumerIrService.java",
+        "line": 138,
+        "excerpt": "public int[] getCarrierFrequencies() {",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L138"
+      },
+      "aidl_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "aosp_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "confidence_level": {
+        "observed_source": "high",
+        "generated_dispatch_and_identity": "medium; inferred, compiler revision not build-manifest matched",
+        "vulnerability": "not assessed as established"
+      },
+      "validation_status": "Unconfirmed \u2014 Android runtime/emulator unavailable; source observations only",
+      "recommended_next_step": "Generate the actual Stub from a resolved build manifest, then run authorized in-process Binder deny/allow tests with a fake sink; no serial/IR hardware calls.",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 28,
+          "excerpt": "@EnforcePermission(\"TRANSMIT_IR\")",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L28"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 29,
+          "excerpt": "int[] getCarrierFrequencies();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L29"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ConsumerIrManager.java",
+          "line": 139,
+          "excerpt": "int[] freqs = mService.getCarrierFrequencies();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ConsumerIrManager.java#L139"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 138,
+          "excerpt": "public int[] getCarrierFrequencies() {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L138"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 139,
+          "excerpt": "super.getCarrierFrequencies_enforcePermission();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L139"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/res/AndroidManifest.xml",
+          "line": 2773,
+          "excerpt": "<permission android:name=\"android.permission.TRANSMIT_IR\"",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/res/AndroidManifest.xml#L2773"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 146,
+          "excerpt": "ConsumerIrFreqRange[] output = mAidlService.getCarrierFreqs();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L146"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 160,
+          "excerpt": "return halGetCarrierFrequencies();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L160"
+        }
+      ],
+      "security_analysis": {
+        "permission_before_operation": {
+          "helper_is_first_statement": true,
+          "helper_invocations": 1,
+          "protected_calls": 2,
+          "helper_before_all_protected_calls": true,
+          "limitation": "Source order in selected method only; not a whole-program control-flow dominance proof"
+        },
+        "caller_identity": "Expected generated helper reads Binder getCallingPid()/getCallingUid(); not an observed runtime identity",
+        "identity_management": {
+          "observed_clear_or_restore_calls": [],
+          "conclusion": "No explicit identity transition in this selected method body"
+        },
+        "exception_handling": {
+          "catch_types": [
+            "RemoteException"
+          ],
+          "conclusion": "No catch around the initial permission helper; IR RemoteException catches surround later HAL calls only"
+        },
+        "permission_suitability": "TRANSMIT_IR is normal and matches IR use; normal protection is not a bypass",
+        "alternate_routes": "AIDL HAL and native fallback occur after the helper. No alternate external route established within this slice; HAL/runtime policy outside scope."
+      },
+      "runtime_test_cases": [
+        {
+          "case": "negative: caller without required permission",
+          "expected": "SecurityException and zero fake-sink operations",
+          "actual": "NOT RUN",
+          "status": "unconfirmed"
+        },
+        {
+          "case": "positive: authorized caller",
+          "expected": "Expected fake-sink operation/return, with Binder UID/PID recorded",
+          "actual": "NOT RUN",
+          "status": "unconfirmed"
+        }
+      ]
+    },
+    {
+      "id": "ConsumerIrService.hasIrEmitter",
+      "service_name": "ConsumerIrService",
+      "entry_point": "IConsumerIrService.hasIrEmitter",
+      "caller_identity": "No caller-dependent access in this capability-query body",
+      "required_permission": "None: explicitly @RequiresNoPermission",
+      "enforcement_location": null,
+      "protected_operation": [
+        "return mHasNativeHal;"
+      ],
+      "source_file_and_line": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/ConsumerIrService.java",
+        "line": 74,
+        "excerpt": "public boolean hasIrEmitter() {",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L74"
+      },
+      "aidl_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "aosp_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "confidence_level": {
+        "observed_source": "high",
+        "generated_dispatch_and_identity": "medium; inferred, compiler revision not build-manifest matched",
+        "vulnerability": "not assessed as established"
+      },
+      "validation_status": "Unconfirmed \u2014 Android runtime/emulator unavailable; source observations only",
+      "recommended_next_step": "Generate the actual Stub from a resolved build manifest, then run authorized in-process Binder deny/allow tests with a fake sink; no serial/IR hardware calls.",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 22,
+          "excerpt": "@RequiresNoPermission",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L22"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 23,
+          "excerpt": "boolean hasIrEmitter();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L23"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ConsumerIrManager.java",
+          "line": 60,
+          "excerpt": "return mService.hasIrEmitter();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ConsumerIrManager.java#L60"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 74,
+          "excerpt": "public boolean hasIrEmitter() {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L74"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 75,
+          "excerpt": "return mHasNativeHal;",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L75"
+        }
+      ],
+      "security_analysis": {
+        "permission_before_operation": null,
+        "caller_identity": "No caller-dependent access in this capability-query body",
+        "identity_management": {
+          "observed_clear_or_restore_calls": [],
+          "conclusion": "No explicit identity transition in this selected method body"
+        },
+        "exception_handling": {
+          "catch_types": [],
+          "conclusion": "No catch in capability query"
+        },
+        "permission_suitability": "AIDL and implementation explicitly mark RequiresNoPermission",
+        "alternate_routes": "AIDL HAL and native fallback occur after the helper. No alternate external route established within this slice; HAL/runtime policy outside scope."
+      },
+      "runtime_test_cases": [
+        {
+          "case": "capability query without permission",
+          "expected": "Boolean capability only, no HAL mutation",
+          "actual": "NOT RUN",
+          "status": "unconfirmed"
+        }
+      ]
+    }
+  ],
+  "local_routes": [
+    {
+      "id": "SerialService.local.addVirtualSerialPortForTest",
+      "service_name": "SerialService",
+      "entry_point": "SerialManagerInternal.addVirtualSerialPortForTest",
+      "caller_identity": "Same-process LocalServices object reference; not an exported AIDL method",
+      "required_permission": "No Binder permission guard here; local in-process API",
+      "enforcement_location": null,
+      "protected_operation": "mSerialPorts.put(name, supplier)",
+      "source_file_and_line": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/SerialService.java",
+        "line": 118,
+        "excerpt": "public void addVirtualSerialPortForTest(@NonNull String name,",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L118"
+      },
+      "aosp_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "confidence_level": {
+        "observed_source": "high",
+        "external_reachability": "unconfirmed; none demonstrated"
+      },
+      "validation_status": "Unconfirmed \u2014 no Android runtime test; not evidence of a bypass",
+      "recommended_next_step": "Enumerate LocalServices consumers in a separately expanded pinned slice; test with trusted fake suppliers only.",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 118,
+          "excerpt": "public void addVirtualSerialPortForTest(@NonNull String name,",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L118"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 125,
+          "excerpt": "mSerialPorts.put(name, supplier);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L125"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 83,
+          "excerpt": "publishLocalService(SerialManagerInternal.class, mService.mInternal);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L83"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/com/android/server/LocalServices.java",
+          "line": 25,
+          "excerpt": "* are not Binder objects and are only available in the same process.",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/com/android/server/LocalServices.java#L25"
+        }
+      ]
+    },
+    {
+      "id": "SerialService.local.removeVirtualSerialPortForTest",
+      "service_name": "SerialService",
+      "entry_point": "SerialManagerInternal.removeVirtualSerialPortForTest",
+      "caller_identity": "Same-process LocalServices object reference; not an exported AIDL method",
+      "required_permission": "No Binder permission guard here; local in-process API",
+      "enforcement_location": null,
+      "protected_operation": "mSerialPorts.remove(name)",
+      "source_file_and_line": {
+        "repository": "aosp-mirror/platform_frameworks_base",
+        "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+        "path": "services/core/java/com/android/server/SerialService.java",
+        "line": 130,
+        "excerpt": "public void removeVirtualSerialPortForTest(@NonNull String name) {",
+        "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L130"
+      },
+      "aosp_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "confidence_level": {
+        "observed_source": "high",
+        "external_reachability": "unconfirmed; none demonstrated"
+      },
+      "validation_status": "Unconfirmed \u2014 no Android runtime test; not evidence of a bypass",
+      "recommended_next_step": "Enumerate LocalServices consumers in a separately expanded pinned slice; test with trusted fake suppliers only.",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 130,
+          "excerpt": "public void removeVirtualSerialPortForTest(@NonNull String name) {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L130"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 136,
+          "excerpt": "mSerialPorts.remove(name);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L136"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 83,
+          "excerpt": "publishLocalService(SerialManagerInternal.class, mService.mInternal);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L83"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/com/android/server/LocalServices.java",
+          "line": 25,
+          "excerpt": "* are not Binder objects and are only available in the same process.",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/com/android/server/LocalServices.java#L25"
+        }
+      ]
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "SerialManager.getSerialPorts",
+      "target": "ISerialManager.getSerialPorts",
+      "kind": "observed-client-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/SerialManager.java",
+          "line": 55,
+          "excerpt": "return mService.getSerialPorts();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/SerialManager.java#L55"
+        }
+      ]
+    },
+    {
+      "source": "ISerialManager.getSerialPorts",
+      "target": "SerialService.getSerialPorts",
+      "kind": "inferred-generated-binder-dispatch",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ISerialManager.aidl",
+          "line": 26,
+          "excerpt": "String[] getSerialPorts();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ISerialManager.aidl#L26"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 88,
+          "excerpt": "public String[] getSerialPorts() {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L88"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 645,
+          "excerpt": "// the real call",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L645"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 569,
+          "excerpt": "auto realCall = std::make_shared<MethodCall>(THIS_VALUE, method.GetName());",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L569"
+        }
+      ]
+    },
+    {
+      "source": "SerialService.getSerialPorts",
+      "target": "ISerialManager.Stub.getSerialPorts_enforcePermission",
+      "kind": "observed-explicit-helper-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 89,
+          "excerpt": "super.getSerialPorts_enforcePermission();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L89"
+        }
+      ]
+    },
+    {
+      "source": "ISerialManager.Stub.getSerialPorts_enforcePermission",
+      "target": "PermissionEnforcer.enforcePermission",
+      "kind": "inferred-generated-permission-helper",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ISerialManager.aidl",
+          "line": 25,
+          "excerpt": "@EnforcePermission(\"SERIAL_PORT\")",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ISerialManager.aidl#L25"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 497,
+          "excerpt": "string Credentials() const { return \"getCallingPid(), getCallingUid()\"; }",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L497"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 538,
+          "excerpt": "*code_ << \"mEnforcer.enforcePermission(\" << permissionName << \", \" << Credentials() << \");\\n\";",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L538"
+        }
+      ]
+    },
+    {
+      "source": "SerialService.getSerialPorts",
+      "target": "ports.add(path);",
+      "kind": "observed-operation",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 95,
+          "excerpt": "ports.add(path);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L95"
+        }
+      ]
+    },
+    {
+      "source": "SerialManager.openSerialPort",
+      "target": "ISerialManager.openSerialPort",
+      "kind": "observed-client-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/SerialManager.java",
+          "line": 77,
+          "excerpt": "ParcelFileDescriptor pfd = mService.openSerialPort(name);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/SerialManager.java#L77"
+        }
+      ]
+    },
+    {
+      "source": "ISerialManager.openSerialPort",
+      "target": "SerialService.openSerialPort",
+      "kind": "inferred-generated-binder-dispatch",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ISerialManager.aidl",
+          "line": 30,
+          "excerpt": "ParcelFileDescriptor openSerialPort(String name);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ISerialManager.aidl#L30"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 103,
+          "excerpt": "public ParcelFileDescriptor openSerialPort(String path) {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L103"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 645,
+          "excerpt": "// the real call",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L645"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 569,
+          "excerpt": "auto realCall = std::make_shared<MethodCall>(THIS_VALUE, method.GetName());",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L569"
+        }
+      ]
+    },
+    {
+      "source": "SerialService.openSerialPort",
+      "target": "ISerialManager.Stub.openSerialPort_enforcePermission",
+      "kind": "observed-explicit-helper-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 104,
+          "excerpt": "super.openSerialPort_enforcePermission();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L104"
+        }
+      ]
+    },
+    {
+      "source": "ISerialManager.Stub.openSerialPort_enforcePermission",
+      "target": "PermissionEnforcer.enforcePermission",
+      "kind": "inferred-generated-permission-helper",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ISerialManager.aidl",
+          "line": 29,
+          "excerpt": "@EnforcePermission(\"SERIAL_PORT\")",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ISerialManager.aidl#L29"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 497,
+          "excerpt": "string Credentials() const { return \"getCallingPid(), getCallingUid()\"; }",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L497"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 538,
+          "excerpt": "*code_ << \"mEnforcer.enforcePermission(\" << permissionName << \", \" << Credentials() << \");\\n\";",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L538"
+        }
+      ]
+    },
+    {
+      "source": "SerialService.openSerialPort",
+      "target": "return supplier.get();",
+      "kind": "observed-operation",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 109,
+          "excerpt": "return supplier.get();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L109"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrManager.transmit",
+      "target": "IConsumerIrService.transmit",
+      "kind": "observed-client-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ConsumerIrManager.java",
+          "line": 84,
+          "excerpt": "mService.transmit(mPackageName, carrierFrequency, pattern);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ConsumerIrManager.java#L84"
+        }
+      ]
+    },
+    {
+      "source": "IConsumerIrService.transmit",
+      "target": "ConsumerIrService.transmit",
+      "kind": "inferred-generated-binder-dispatch",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 26,
+          "excerpt": "void transmit(String packageName, int carrierFrequency, in int[] pattern);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L26"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 100,
+          "excerpt": "public void transmit(String packageName, int carrierFrequency, int[] pattern) {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L100"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 645,
+          "excerpt": "// the real call",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L645"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 569,
+          "excerpt": "auto realCall = std::make_shared<MethodCall>(THIS_VALUE, method.GetName());",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L569"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrService.transmit",
+      "target": "IConsumerIrService.Stub.transmit_enforcePermission",
+      "kind": "observed-explicit-helper-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 101,
+          "excerpt": "super.transmit_enforcePermission();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L101"
+        }
+      ]
+    },
+    {
+      "source": "IConsumerIrService.Stub.transmit_enforcePermission",
+      "target": "PermissionEnforcer.enforcePermission",
+      "kind": "inferred-generated-permission-helper",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 25,
+          "excerpt": "@EnforcePermission(\"TRANSMIT_IR\")",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L25"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 497,
+          "excerpt": "string Credentials() const { return \"getCallingPid(), getCallingUid()\"; }",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L497"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 538,
+          "excerpt": "*code_ << \"mEnforcer.enforcePermission(\" << permissionName << \", \" << Credentials() << \");\\n\";",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L538"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrService.transmit",
+      "target": "mAidlService.transmit(carrierFrequency, pattern);",
+      "kind": "observed-operation",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 122,
+          "excerpt": "mAidlService.transmit(carrierFrequency, pattern);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L122"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrService.transmit",
+      "target": "int err = halTransmit(carrierFrequency, pattern);",
+      "kind": "observed-operation",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 127,
+          "excerpt": "int err = halTransmit(carrierFrequency, pattern);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L127"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrManager.getCarrierFrequencies",
+      "target": "IConsumerIrService.getCarrierFrequencies",
+      "kind": "observed-client-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ConsumerIrManager.java",
+          "line": 139,
+          "excerpt": "int[] freqs = mService.getCarrierFrequencies();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ConsumerIrManager.java#L139"
+        }
+      ]
+    },
+    {
+      "source": "IConsumerIrService.getCarrierFrequencies",
+      "target": "ConsumerIrService.getCarrierFrequencies",
+      "kind": "inferred-generated-binder-dispatch",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 29,
+          "excerpt": "int[] getCarrierFrequencies();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L29"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 138,
+          "excerpt": "public int[] getCarrierFrequencies() {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L138"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 645,
+          "excerpt": "// the real call",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L645"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 569,
+          "excerpt": "auto realCall = std::make_shared<MethodCall>(THIS_VALUE, method.GetName());",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L569"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrService.getCarrierFrequencies",
+      "target": "IConsumerIrService.Stub.getCarrierFrequencies_enforcePermission",
+      "kind": "observed-explicit-helper-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 139,
+          "excerpt": "super.getCarrierFrequencies_enforcePermission();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L139"
+        }
+      ]
+    },
+    {
+      "source": "IConsumerIrService.Stub.getCarrierFrequencies_enforcePermission",
+      "target": "PermissionEnforcer.enforcePermission",
+      "kind": "inferred-generated-permission-helper",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 28,
+          "excerpt": "@EnforcePermission(\"TRANSMIT_IR\")",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L28"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 497,
+          "excerpt": "string Credentials() const { return \"getCallingPid(), getCallingUid()\"; }",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L497"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 538,
+          "excerpt": "*code_ << \"mEnforcer.enforcePermission(\" << permissionName << \", \" << Credentials() << \");\\n\";",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L538"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrService.getCarrierFrequencies",
+      "target": "ConsumerIrFreqRange[] output = mAidlService.getCarrierFreqs();",
+      "kind": "observed-operation",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 146,
+          "excerpt": "ConsumerIrFreqRange[] output = mAidlService.getCarrierFreqs();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L146"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrService.getCarrierFrequencies",
+      "target": "return halGetCarrierFrequencies();",
+      "kind": "observed-operation",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 160,
+          "excerpt": "return halGetCarrierFrequencies();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L160"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrManager.hasIrEmitter",
+      "target": "IConsumerIrService.hasIrEmitter",
+      "kind": "observed-client-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/ConsumerIrManager.java",
+          "line": 60,
+          "excerpt": "return mService.hasIrEmitter();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/ConsumerIrManager.java#L60"
+        }
+      ]
+    },
+    {
+      "source": "IConsumerIrService.hasIrEmitter",
+      "target": "ConsumerIrService.hasIrEmitter",
+      "kind": "inferred-generated-binder-dispatch",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/android/hardware/IConsumerIrService.aidl",
+          "line": 23,
+          "excerpt": "boolean hasIrEmitter();",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/hardware/IConsumerIrService.aidl#L23"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 74,
+          "excerpt": "public boolean hasIrEmitter() {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L74"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 645,
+          "excerpt": "// the real call",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L645"
+        },
+        {
+          "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+          "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+          "path": "generate_java_binder.cpp",
+          "line": 569,
+          "excerpt": "auto realCall = std::make_shared<MethodCall>(THIS_VALUE, method.GetName());",
+          "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L569"
+        }
+      ]
+    },
+    {
+      "source": "ConsumerIrService.hasIrEmitter",
+      "target": "return mHasNativeHal;",
+      "kind": "observed-operation",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/ConsumerIrService.java",
+          "line": 75,
+          "excerpt": "return mHasNativeHal;",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/ConsumerIrService.java#L75"
+        }
+      ]
+    },
+    {
+      "source": "SerialService.Lifecycle.onStart",
+      "target": "SerialManagerInternal.addVirtualSerialPortForTest",
+      "kind": "observed-local-registration-and-interface; not Binder dispatch",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 118,
+          "excerpt": "public void addVirtualSerialPortForTest(@NonNull String name,",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L118"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 125,
+          "excerpt": "mSerialPorts.put(name, supplier);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L125"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 83,
+          "excerpt": "publishLocalService(SerialManagerInternal.class, mService.mInternal);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L83"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/com/android/server/LocalServices.java",
+          "line": 25,
+          "excerpt": "* are not Binder objects and are only available in the same process.",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/com/android/server/LocalServices.java#L25"
+        }
+      ]
+    },
+    {
+      "source": "SerialService.Lifecycle.onStart",
+      "target": "SerialManagerInternal.removeVirtualSerialPortForTest",
+      "kind": "observed-local-registration-and-interface; not Binder dispatch",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 130,
+          "excerpt": "public void removeVirtualSerialPortForTest(@NonNull String name) {",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L130"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 136,
+          "excerpt": "mSerialPorts.remove(name);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L136"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 83,
+          "excerpt": "publishLocalService(SerialManagerInternal.class, mService.mInternal);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L83"
+        },
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "core/java/com/android/server/LocalServices.java",
+          "line": 25,
+          "excerpt": "* are not Binder objects and are only available in the same process.",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/com/android/server/LocalServices.java#L25"
+        }
+      ]
+    },
+    {
+      "source": "return supplier.get();",
+      "target": "tryOpen(serialPort) [configured supplier only; virtual target unresolved]",
+      "kind": "observed-configured-supplier-lambda",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 61,
+          "excerpt": "return tryOpen(serialPort);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L61"
+        }
+      ]
+    },
+    {
+      "source": "tryOpen(serialPort) [configured supplier only; virtual target unresolved]",
+      "target": "Os.open(path, O_RDWR | O_NOCTTY)",
+      "kind": "observed-native-open-call",
+      "evidence": [
+        {
+          "repository": "aosp-mirror/platform_frameworks_base",
+          "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+          "path": "services/core/java/com/android/server/SerialService.java",
+          "line": 143,
+          "excerpt": "FileDescriptor fd = Os.open(path, OsConstants.O_RDWR | OsConstants.O_NOCTTY, 0);",
+          "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L143"
+        }
+      ]
+    }
+  ],
+  "supporting_evidence": {
+    "explicit_enforcer_injection": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "services/core/java/com/android/server/SerialService.java",
+      "line": 54,
+      "excerpt": "super(PermissionEnforcer.fromContext(context));",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L54"
+    },
+    "serial_supplier_to_try_open": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "services/core/java/com/android/server/SerialService.java",
+      "line": 61,
+      "excerpt": "return tryOpen(serialPort);",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L61"
+    },
+    "serial_native_open": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "services/core/java/com/android/server/SerialService.java",
+      "line": 143,
+      "excerpt": "FileDescriptor fd = Os.open(path, OsConstants.O_RDWR | OsConstants.O_NOCTTY, 0);",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L143"
+    },
+    "serial_open_error_catch": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "services/core/java/com/android/server/SerialService.java",
+      "line": 145,
+      "excerpt": "} catch (ErrnoException e) {",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L145"
+    },
+    "serial_service_registration": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "services/core/java/com/android/server/SerialService.java",
+      "line": 82,
+      "excerpt": "publishBinderService(Context.SERIAL_SERVICE, mService);",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/core/java/com/android/server/SerialService.java#L82"
+    },
+    "serial_systemserver_start": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "services/java/com/android/server/SystemServer.java",
+      "line": 2466,
+      "excerpt": "mSystemServiceManager.startService(SerialService.Lifecycle.class);",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/java/com/android/server/SystemServer.java#L2466"
+    },
+    "ir_systemserver_registration": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "services/java/com/android/server/SystemServer.java",
+      "line": 1671,
+      "excerpt": "ServiceManager.addService(Context.CONSUMER_IR_SERVICE, consumerIr);",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/services/java/com/android/server/SystemServer.java#L1671"
+    },
+    "binder_uid_contract": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "core/java/android/os/Binder.java",
+      "line": 338,
+      "excerpt": "public static final native int getCallingUid();",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/os/Binder.java#L338"
+    },
+    "binder_pid_contract": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "core/java/android/os/Binder.java",
+      "line": 328,
+      "excerpt": "public static final native int getCallingPid();",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/os/Binder.java#L328"
+    },
+    "enforcer_appops_delegation": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 139,
+      "excerpt": "if (permissionToOpCode(permission) != AppOpsManager.OP_NONE) {",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/os/PermissionEnforcer.java#L139"
+    },
+    "enforcer_denial": {
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 144,
+      "excerpt": "int result = checkPermission(permission, pid, uid);",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/1cdfff555f4a21f71ccc978290e2e212e2f8b168/core/java/android/os/PermissionEnforcer.java#L144"
+    }
+  },
+  "generator_evidence": [
+    {
+      "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+      "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+      "path": "generate_java_binder.cpp",
+      "line": 497,
+      "excerpt": "string Credentials() const { return \"getCallingPid(), getCallingUid()\"; }",
+      "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L497"
+    },
+    {
+      "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+      "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+      "path": "generate_java_binder.cpp",
+      "line": 538,
+      "excerpt": "*code_ << \"mEnforcer.enforcePermission(\" << permissionName << \", \" << Credentials() << \");\\n\";",
+      "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L538"
+    },
+    {
+      "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+      "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+      "path": "generate_java_binder.cpp",
+      "line": 314,
+      "excerpt": "code << \"this(android.os.PermissionEnforcer.fromContext(\\n\";",
+      "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L314"
+    },
+    {
+      "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+      "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+      "path": "generate_java_binder.cpp",
+      "line": 645,
+      "excerpt": "// the real call",
+      "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L645"
+    },
+    {
+      "repository": "aosp-mirror-neo/platform_system_tools_aidl",
+      "commit": "a73091e714248afbf28a6d2ec3226d756288cc75",
+      "path": "generate_java_binder.cpp",
+      "line": 569,
+      "excerpt": "auto realCall = std::make_shared<MethodCall>(THIS_VALUE, method.GetName());",
+      "url": "https://github.com/aosp-mirror-neo/platform_system_tools_aidl/blob/a73091e714248afbf28a6d2ec3226d756288cc75/generate_java_binder.cpp#L569"
+    }
+  ],
+  "phase_one_reclassification": [
+    {
+      "line": 96,
+      "kind": "declaration",
+      "snippet": "protected int checkPermission(@NonNull String permission, @NonNull AttributionSource source) {",
+      "status": "unconfirmed"
+    },
+    {
+      "line": 103,
+      "kind": "declaration",
+      "snippet": "protected int checkPermission(@NonNull String permission, int pid, int uid) {",
+      "status": "unconfirmed"
+    },
+    {
+      "line": 104,
+      "kind": "invocation",
+      "snippet": "if (mContext.checkPermission(permission, pid, uid) == PackageManager.PERMISSION_GRANTED) {",
+      "status": "unconfirmed"
+    },
+    {
+      "line": 131,
+      "kind": "invocation",
+      "snippet": "int result = checkPermission(permission, source);",
+      "status": "unconfirmed"
+    },
+    {
+      "line": 144,
+      "kind": "invocation",
+      "snippet": "int result = checkPermission(permission, pid, uid);",
+      "status": "unconfirmed"
+    },
+    {
+      "line": 153,
+      "kind": "invocation",
+      "snippet": "int result = checkPermission(permission, source);",
+      "status": "unconfirmed"
+    },
+    {
+      "line": 169,
+      "kind": "invocation",
+      "snippet": "int result = checkPermission(permission, pid, uid);",
+      "status": "unconfirmed"
+    },
+    {
+      "line": 180,
+      "kind": "invocation",
+      "snippet": "int result = checkPermission(permission, source);",
+      "status": "unconfirmed"
+    },
+    {
+      "line": 197,
+      "kind": "invocation",
+      "snippet": "int result = checkPermission(permission, pid, uid);",
+      "status": "unconfirmed"
+    }
+  ],
+  "validation": {
+    "scope": "safe local Python model only; mutations are test controls, not AOSP behavior",
+    "checks": [
+      {
+        "name": "negative: denied caller has zero protected operations",
+        "expected": {
+          "outcome": "denied",
+          "protected_operation_count": 0,
+          "uid_checked": 20001
+        },
+        "actual": {
+          "outcome": "denied",
+          "protected_operation_count": 0,
+          "uid_checked": 20001
+        },
+        "passed": true
+      },
+      {
+        "name": "positive: permitted caller reaches one synthetic operation",
+        "expected": {
+          "outcome": "allowed",
+          "protected_operation_count": 1,
+          "uid_checked": 20001
+        },
+        "actual": {
+          "outcome": "allowed",
+          "protected_operation_count": 1,
+          "uid_checked": 20001
+        },
+        "passed": true
+      },
+      {
+        "name": "mutation control: identity clear before check is detected",
+        "expected": {
+          "outcome": "allowed",
+          "protected_operation_count": 1,
+          "uid_checked": 1000
+        },
+        "actual": {
+          "outcome": "allowed",
+          "protected_operation_count": 1,
+          "uid_checked": 1000
+        },
+        "passed": true
+      },
+      {
+        "name": "mutation control: swallowed denial is detected",
+        "expected": {
+          "outcome": "allowed",
+          "protected_operation_count": 1,
+          "uid_checked": 20001
+        },
+        "actual": {
+          "outcome": "allowed",
+          "protected_operation_count": 1,
+          "uid_checked": 20001
+        },
+        "passed": true
+      },
+      {
+        "name": "capability query intentionally has no permission check",
+        "expected": {
+          "outcome": "capability",
+          "protected_operation_count": 0,
+          "uid_checked": null
+        },
+        "actual": {
+          "outcome": "capability",
+          "protected_operation_count": 0,
+          "uid_checked": null
+        },
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "android_runtime_executed": false,
+    "vulnerability_verified": false
+  },
+  "environment_tools": {
+    "adb": null,
+    "emulator": null,
+    "aidl": null,
+    "javac": null
+  },
+  "android_runtime_validation": "NOT RUN",
+  "independently_validated_vulnerabilities": 0,
+  "limitations": [
+    "Lexical method/call extraction and manually selected sinks are not a general Java call graph or CFG.",
+    "No reflection, polymorphic resolution, JNI/HAL internals, complete LocalServices callers, SELinux or build artifacts analyzed. PermissionChecker/AppOps behavior beyond the enforcer delegation is not audited.",
+    "Source order and absence of local catches do not prove whole-program safety.",
+    "No Android runtime, emulator, generated Stub build or production device was used."
+  ]
+}

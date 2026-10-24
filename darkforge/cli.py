@@ -37,6 +37,9 @@ def parser():
     a = sub.add_parser('dashboard', help='Export an offline interactive dashboard')
     a.add_argument('--source', default='work/aosp')
     a.add_argument('--destination', default='work/reports/dashboard.html')
+    a = sub.add_parser('callgraph', help='Analyze the pinned phase-two service slice')
+    a.add_argument('--source', default=str(PROJECT / 'vendor/phase2'))
+    a.add_argument('--destination', default='evidence/phase2')
     a = sub.add_parser('serve')
     a.add_argument('--source', default='work/aosp')
     a.add_argument('--port', type=int, default=8765)
@@ -88,6 +91,8 @@ def main(argv=None):
         elif args.command == 'dashboard':
             result = job('dashboard', dict(db_path=db_path, source_root=str(Path(args.source).resolve()),
                                            destination=str(Path(args.destination).resolve())))
+        elif args.command == 'callgraph':
+            result = job('callgraph', dict(root=str(Path(args.source).resolve()), destination=str(Path(args.destination).resolve())))
         elif args.command == 'serve':
             from .web import serve
             serve(db_path, Path(args.source).resolve(), args.port)
