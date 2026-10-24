@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-10-24T09:53:04.897920+00:00",
+  "python": "3.12.14",
+  "source_commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+  "source_git_blob": "3cc6fb5ad0ef422241a31809dc0f526e953cb46d",
+  "aosp_hint_count": 9,
+  "scan_count": 2,
+  "duplicate_seen_counts": [
+    2
+  ],
+  "independently_validated_aosp_vulnerabilities": 0,
+  "synthetic_validation": {
+    "scope": "synthetic Python models only; NOT validation of an AOSP vulnerability",
+    "independently_validated_aosp": false,
+    "sample_sha256": "c6bf7e83dd9d3fa3b07f7ba0b866d76370f678ced53937b9fd761681cf5f7601",
+    "checks": [
+      {
+        "name": "synthetic missing-enforcement model returns data for denied input",
+        "passed": true
+      },
+      {
+        "name": "patched model denies unprivileged input",
+        "passed": true
+      },
+      {
+        "name": "patched model accepts explicit permission",
+        "passed": true
+      },
+      {
+        "name": "oversized input rejected",
+        "passed": true
+      },
+      {
+        "name": "boundary input accepted",
+        "passed": true
+      },
+      {
+        "name": "structured decoding rejects wrong schema",
+        "passed": true
+      },
+      {
+        "name": "structured decoding accepts expected schema",
+        "passed": true
+      },
+      {
+        "name": "safe logging excludes credential values",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "log_event_count": 6,
+  "reports": [
+    "report.json",
+    "report.md",
+    "report.html",
+    "report.pdf",
+    "bughunters-draft.md"
+  ],
+  "pdf_check": {
+    "returncode": 0,
+    "contains_commit": true
+  },
+  "offline_dashboard": {
+    "file": "dashboard.html",
+    "indexed_lines": 214
+  },
+  "semgrep_actual_execution": false,
+  "live_socket_server_verified": false,
+  "limitations": [
+    "Shell proxy unreachable for source/Git downloads; connected GitHub tool supplied immutable source.",
+    "Semgrep install unavailable; builtin fallback used. Adapter mocks do not validate Semgrep runtime.",
+    "Socket creation forbidden; in-memory HTTP handler and offline dashboard tested.",
+    "No Android build, Android runtime test or independently validated AOSP vulnerability."
+  ]
+}

@@ -1,0 +1,238 @@
+%PDF-1.4
+%DarkForge
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 4 /Kids [4 0 R 6 0 R 8 0 R 10 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 3296 >>
+stream
+BT /F1 9 Tf 36 756 Td 13 TL
+(DarkForge-X Research Report) Tj T*
+(2026-10-24T09:53:04.707864+00:00) Tj T*
+(RESEARCH HINTS ONLY. No independently validated AOSP vulnerability. Confidence measures pattern) Tj T*
+(relevance, not exploitability. Synthetic model results do not establish Android behavior.) Tj T*
+() Tj T*
+(Recorded analysis runs) Tj T*
+(Run 1: aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(Engine: builtin; fixture=False;) Tj T*
+(Corpus SHA256: 0ac4dffc016c0a6ce4911927b87b28f5020cd10dae3d642d845340bfd1a8fec5) Tj T*
+(Run 2: aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(Engine: builtin; fixture=False;) Tj T*
+(Corpus SHA256: 0ac4dffc016c0a6ce4911927b87b28f5020cd10dae3d642d845340bfd1a8fec5) Tj T*
+() Tj T*
+(Findings \(all require human review\)) Tj T*
+(#1 Review permission check result and caller identity before privileged action) Tj T*
+(Status: unconfirmed; CWE-862; confidence=0.35) Tj T*
+(aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(core/java/android/os/PermissionEnforcer.java:96) Tj T*
+(Evidence:     protected int checkPermission\(@NonNull String permission, @NonNull) Tj T*
+(AttributionSource source\) {) Tj T*
+(Hypothesis: Could a denied result be ignored, or a caller identity be confused? Trace callers) Tj T*
+(and all branches.) Tj T*
+(Patch recommendation: Enforce permission before side effects; reject denied callers and) Tj T*
+(document identity boundaries.) Tj T*
+(Reviewer:) Tj T*
+() Tj T*
+(#2 Review permission check result and caller identity before privileged action) Tj T*
+(Status: unconfirmed; CWE-862; confidence=0.35) Tj T*
+(aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(core/java/android/os/PermissionEnforcer.java:103) Tj T*
+(Evidence:     protected int checkPermission\(@NonNull String permission, int pid, int uid\) {) Tj T*
+(Hypothesis: Could a denied result be ignored, or a caller identity be confused? Trace callers) Tj T*
+(and all branches.) Tj T*
+(Patch recommendation: Enforce permission before side effects; reject denied callers and) Tj T*
+(document identity boundaries.) Tj T*
+(Reviewer:) Tj T*
+() Tj T*
+(#3 Review permission check result and caller identity before privileged action) Tj T*
+(Status: unconfirmed; CWE-862; confidence=0.35) Tj T*
+(aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(core/java/android/os/PermissionEnforcer.java:104) Tj T*
+(Evidence:         if \(mContext.checkPermission\(permission, pid, uid\) ==) Tj T*
+(PackageManager.PERMISSION_GRANTED\) {) Tj T*
+(Hypothesis: Could a denied result be ignored, or a caller identity be confused? Trace callers) Tj T*
+(and all branches.) Tj T*
+(Patch recommendation: Enforce permission before side effects; reject denied callers and) Tj T*
+(document identity boundaries.) Tj T*
+(Reviewer:) Tj T*
+() Tj T*
+(#4 Review permission check result and caller identity before privileged action) Tj T*
+(Status: unconfirmed; CWE-862; confidence=0.35) Tj T*
+(aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(core/java/android/os/PermissionEnforcer.java:131) Tj T*
+(Evidence:         int result = checkPermission\(permission, source\);) Tj T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 3233 >>
+stream
+BT /F1 9 Tf 36 756 Td 13 TL
+(Hypothesis: Could a denied result be ignored, or a caller identity be confused? Trace callers) Tj T*
+(and all branches.) Tj T*
+(Patch recommendation: Enforce permission before side effects; reject denied callers and) Tj T*
+(document identity boundaries.) Tj T*
+(Reviewer:) Tj T*
+() Tj T*
+(#5 Review permission check result and caller identity before privileged action) Tj T*
+(Status: unconfirmed; CWE-862; confidence=0.35) Tj T*
+(aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(core/java/android/os/PermissionEnforcer.java:144) Tj T*
+(Evidence:         int result = checkPermission\(permission, pid, uid\);) Tj T*
+(Hypothesis: Could a denied result be ignored, or a caller identity be confused? Trace callers) Tj T*
+(and all branches.) Tj T*
+(Patch recommendation: Enforce permission before side effects; reject denied callers and) Tj T*
+(document identity boundaries.) Tj T*
+(Reviewer:) Tj T*
+() Tj T*
+(#6 Review permission check result and caller identity before privileged action) Tj T*
+(Status: unconfirmed; CWE-862; confidence=0.35) Tj T*
+(aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(core/java/android/os/PermissionEnforcer.java:153) Tj T*
+(Evidence:             int result = checkPermission\(permission, source\);) Tj T*
+(Hypothesis: Could a denied result be ignored, or a caller identity be confused? Trace callers) Tj T*
+(and all branches.) Tj T*
+(Patch recommendation: Enforce permission before side effects; reject denied callers and) Tj T*
+(document identity boundaries.) Tj T*
+(Reviewer:) Tj T*
+() Tj T*
+(#7 Review permission check result and caller identity before privileged action) Tj T*
+(Status: unconfirmed; CWE-862; confidence=0.35) Tj T*
+(aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(core/java/android/os/PermissionEnforcer.java:169) Tj T*
+(Evidence:             int result = checkPermission\(permission, pid, uid\);) Tj T*
+(Hypothesis: Could a denied result be ignored, or a caller identity be confused? Trace callers) Tj T*
+(and all branches.) Tj T*
+(Patch recommendation: Enforce permission before side effects; reject denied callers and) Tj T*
+(document identity boundaries.) Tj T*
+(Reviewer:) Tj T*
+() Tj T*
+(#8 Review permission check result and caller identity before privileged action) Tj T*
+(Status: unconfirmed; CWE-862; confidence=0.35) Tj T*
+(aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(core/java/android/os/PermissionEnforcer.java:180) Tj T*
+(Evidence:             int result = checkPermission\(permission, source\);) Tj T*
+(Hypothesis: Could a denied result be ignored, or a caller identity be confused? Trace callers) Tj T*
+(and all branches.) Tj T*
+(Patch recommendation: Enforce permission before side effects; reject denied callers and) Tj T*
+(document identity boundaries.) Tj T*
+(Reviewer:) Tj T*
+() Tj T*
+(#9 Review permission check result and caller identity before privileged action) Tj T*
+(Status: unconfirmed; CWE-862; confidence=0.35) Tj T*
+(aosp-mirror/platform_frameworks_base @ 1cdfff555f4a21f71ccc978290e2e212e2f8b168) Tj T*
+(core/java/android/os/PermissionEnforcer.java:197) Tj T*
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 4807 >>
+stream
+BT /F1 9 Tf 36 756 Td 13 TL
+(Evidence:             int result = checkPermission\(permission, pid, uid\);) Tj T*
+(Hypothesis: Could a denied result be ignored, or a caller identity be confused? Trace callers) Tj T*
+(and all branches.) Tj T*
+(Patch recommendation: Enforce permission before side effects; reject denied callers and) Tj T*
+(document identity boundaries.) Tj T*
+(Reviewer:) Tj T*
+() Tj T*
+(Evidence records) Tj T*
+(synthetic-validation SHA256=43a61700ac4ccd91d7d32f672f496bf1884fb6679238a50d2bcec81da11d091e) Tj T*
+({"checks": [{"name": "synthetic missing-enforcement model returns data for denied input",) Tj T*
+("passed": true}, {"name": "patched model denies unprivileged input", "passed": true}, {"name":) Tj T*
+("patched model accepts explicit permission", "passed": true}, {"name": "oversized input) Tj T*
+(rejected", "passed": true}, {"name": "boundary input accepted", "passed": true}, {"name":) Tj T*
+("structured decoding rejects wrong schema", "passed": true}, {"name": "structured decoding) Tj T*
+(accepts expected schema", "passed": true}, {"name": "safe logging excludes credential values",) Tj T*
+("passed": true}], "independently_validated_aosp": false, "passed": true, "sample_sha256":) Tj T*
+("c6bf7e83dd9d3fa3b07f7ba0b866d76370f678ced53937b9fd761681cf5f7601", "scope": "synthetic Python) Tj T*
+(models only; NOT validation of an AOSP vulnerability"}) Tj T*
+(synthetic-logs SHA256=5211f4eaf875557f91858bcce0698280e533f9634d1fcfab0b683dc4d88a2ca1) Tj T*
+({"events": [{"context": ["SYNTHETIC FIXTURE: contains no device or user data", "==123==ERROR:) Tj T*
+(AddressSanitizer: heap-buffer-overflow on address 0x12345678", "    #0 0x1234 in lab_copy) Tj T*
+(synthetic.cpp:12", "ERROR: HWAddressSanitizer: tag-mismatch on address 0x12345678",) Tj T*
+("synthetic.cpp:18: runtime error: signed integer overflow", "signal 11 \(SIGSEGV\), code 1, fault) Tj T*
+(addr 0x12345678", "FATAL EXCEPTION: main"], "cwe": "CWE-119", "kind": "asan", "limitation": "A) Tj T*
+(crash signature does not establish root cause, reachability, or a vulnerability.", "line": 2,) Tj T*
+("signature": "22c17900a4bcb2d6c62ad91e1007ecba5286769af7491d3d839665e7ae5a0a67", "status":) Tj T*
+("unconfirmed", "summary": "==123==ERROR: AddressSanitizer: heap-buffer-overflow on address) Tj T*
+(0x12345678"}, {"context": ["    #0 0x1234 in lab_copy synthetic.cpp:12", "ERROR:) Tj T*
+(HWAddressSanitizer: tag-mismatch on address 0x12345678", "synthetic.cpp:18: runtime error:) Tj T*
+(signed integer overflow", "signal 11 \(SIGSEGV\), code 1, fault addr 0x12345678", "FATAL) Tj T*
+(EXCEPTION: main", "java.lang.IllegalArgumentException: synthetic fixture"], "cwe": "CWE-119",) Tj T*
+("kind": "hwasan", "limitation": "A crash signature does not establish root cause, reachability,) Tj T*
+(or a vulnerability.", "line": 4, "signature":) Tj T*
+("7bd95cfb6b09424e03d1dde43149dea4a2bdfda341c43b92494c0ded49a3908d", "status": "unconfirmed",) Tj T*
+("summary": "ERROR: HWAddressSanitizer: tag-mismatch on address 0x12345678"}, {"context":) Tj T*
+(["ERROR: HWAddressSanitizer: tag-mismatch on address 0x12345678", "synthetic.cpp:18: runtime) Tj T*
+(error: signed integer overflow", "signal 11 \(SIGSEGV\), code 1, fault addr 0x12345678", "FATAL) Tj T*
+(EXCEPTION: main", "java.lang.IllegalArgumentException: synthetic fixture"], "cwe": "CWE-758",) Tj T*
+("kind": "ubsan", "limitation": "A crash signature does not establish root cause, reachability,) Tj T*
+(or a vulnerability.", "line": 5, "signature":) Tj T*
+("0e56abb74b887f7efd95498ccd12523592b123cd384876bae9f03ff6b4407c11", "status": "unconfirmed",) Tj T*
+("summary": "synthetic.cpp:18: runtime error: signed integer overflow"}, {"context":) Tj T*
+(["synthetic.cpp:18: runtime error: signed integer overflow", "signal 11 \(SIGSEGV\), code 1,) Tj T*
+(fault addr 0x12345678", "FATAL EXCEPTION: main", "java.lang.IllegalArgumentException: synthetic) Tj T*
+(fixture"], "cwe": "unclassified", "kind": "android-native", "limitation": "A crash signature) Tj T*
+(does not establish root cause, reachability, or a vulnerability.", "line": 6, "signature":) Tj T*
+("16afe8c46912a80968d93596a8d0f45d86230b54783283aee6a0e45c7f70fcae", "status": "unconfirmed",) Tj T*
+("summary": "signal 11 \(SIGSEGV\), code 1, fault addr 0x12345678"}, {"context": ["signal 11) Tj T*
+(\(SIGSEGV\), code 1, fault addr 0x12345678", "FATAL EXCEPTION: main",) Tj T*
+("java.lang.IllegalArgumentException: synthetic fixture"], "cwe": "unclassified", "kind":) Tj T*
+("android-java", "limitation": "A crash signature does not establish root cause, reachability,) Tj T*
+(or a vulnerability.", "line": 7, "signature":) Tj T*
+("9b9538c2a9ec21b52bbc21ae36e9f8c07290f90846b999f5d90c9a83dd646475", "status": "unconfirmed",) Tj T*
+("summary": "FATAL EXCEPTION: main"}, {"context": ["FATAL EXCEPTION: main",) Tj T*
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 568 >>
+stream
+BT /F1 9 Tf 36 756 Td 13 TL
+("java.lang.IllegalArgumentException: synthetic fixture"], "cwe": "unclassified", "kind":) Tj T*
+("android-java", "limitation": "A crash signature does not establish root cause, reachability,) Tj T*
+(or a vulnerability.", "line": 8, "signature":) Tj T*
+("4d4f73ac91bc7714d1311d23a4b63f68746ff388518c5903a265f22fdd1a7ae5", "status": "unconfirmed",) Tj T*
+("summary": "java.lang.IllegalArgumentException: synthetic fixture"}], "sha256":) Tj T*
+("dd28bd7f843b8e6a86bce49e79e3151e70a9c1806edb48bd146994ae16446bea", "truncated": false}) Tj T*
+ET
+endstream
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000020 00000 n 
+0000000069 00000 n 
+0000000145 00000 n 
+0000000213 00000 n 
+0000000339 00000 n 
+0000003687 00000 n 
+0000003813 00000 n 
+0000007098 00000 n 
+0000007224 00000 n 
+0000012083 00000 n 
+0000012211 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+12831
+%%EOF

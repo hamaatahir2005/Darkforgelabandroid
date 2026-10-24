@@ -1,0 +1,4 @@
+<!-- Isolated synthetic manifest; not an installable application. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="lab.synthetic">
+  <application><service android:name=".Example" android:exported="true" /></application>
+</manifest>

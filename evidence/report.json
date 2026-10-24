@@ -1,0 +1,362 @@
+{
+  "title": "DarkForge-X Research Report",
+  "generated_at": "2026-10-24T09:53:04.707864+00:00",
+  "disclaimer": "RESEARCH HINTS ONLY. No independently validated AOSP vulnerability. Confidence measures pattern relevance, not exploitability. Synthetic model results do not establish Android behavior.",
+  "runs": [
+    {
+      "id": 1,
+      "created": "2026-10-24T09:53:04.680470+00:00",
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "engine": "builtin",
+      "diagnostic": "",
+      "corpus_sha256": "0ac4dffc016c0a6ce4911927b87b28f5020cd10dae3d642d845340bfd1a8fec5",
+      "fixture": 0
+    },
+    {
+      "id": 2,
+      "created": "2026-10-24T09:53:04.680834+00:00",
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "engine": "builtin",
+      "diagnostic": "",
+      "corpus_sha256": "0ac4dffc016c0a6ce4911927b87b28f5020cd10dae3d642d845340bfd1a8fec5",
+      "fixture": 0
+    }
+  ],
+  "findings": [
+    {
+      "id": 1,
+      "fingerprint": "9493c3a21b3fc684589942d0ee706b666601b4369e558e2c0c59fb2828339ffe",
+      "first_run": 1,
+      "last_run": 2,
+      "seen": 2,
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "rule": "df-permission-check-review",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 96,
+      "snippet": "    protected int checkPermission(@NonNull String permission, @NonNull AttributionSource source) {",
+      "cwe": "CWE-862",
+      "confidence": 0.35,
+      "title": "Review permission check result and caller identity before privileged action",
+      "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+      "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries.",
+      "status": "unconfirmed",
+      "review": ""
+    },
+    {
+      "id": 2,
+      "fingerprint": "66eed340ce2f51819a876ce87fd55c4d0796f4418fea5481d8a647c812324a7a",
+      "first_run": 1,
+      "last_run": 2,
+      "seen": 2,
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "rule": "df-permission-check-review",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 103,
+      "snippet": "    protected int checkPermission(@NonNull String permission, int pid, int uid) {",
+      "cwe": "CWE-862",
+      "confidence": 0.35,
+      "title": "Review permission check result and caller identity before privileged action",
+      "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+      "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries.",
+      "status": "unconfirmed",
+      "review": ""
+    },
+    {
+      "id": 3,
+      "fingerprint": "4058195f185f14cdbca54d6b654aac95821e5d81530920ab6197a208ad10429a",
+      "first_run": 1,
+      "last_run": 2,
+      "seen": 2,
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "rule": "df-permission-check-review",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 104,
+      "snippet": "        if (mContext.checkPermission(permission, pid, uid) == PackageManager.PERMISSION_GRANTED) {",
+      "cwe": "CWE-862",
+      "confidence": 0.35,
+      "title": "Review permission check result and caller identity before privileged action",
+      "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+      "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries.",
+      "status": "unconfirmed",
+      "review": ""
+    },
+    {
+      "id": 4,
+      "fingerprint": "02f0d165c85282559c66779866cf039972806398df0b829d5617858ca0347114",
+      "first_run": 1,
+      "last_run": 2,
+      "seen": 2,
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "rule": "df-permission-check-review",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 131,
+      "snippet": "        int result = checkPermission(permission, source);",
+      "cwe": "CWE-862",
+      "confidence": 0.35,
+      "title": "Review permission check result and caller identity before privileged action",
+      "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+      "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries.",
+      "status": "unconfirmed",
+      "review": ""
+    },
+    {
+      "id": 5,
+      "fingerprint": "5a323ce14ef634836d848b42c949b4a9fe61bbeb5fa3235dae299ceee5161b7d",
+      "first_run": 1,
+      "last_run": 2,
+      "seen": 2,
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "rule": "df-permission-check-review",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 144,
+      "snippet": "        int result = checkPermission(permission, pid, uid);",
+      "cwe": "CWE-862",
+      "confidence": 0.35,
+      "title": "Review permission check result and caller identity before privileged action",
+      "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+      "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries.",
+      "status": "unconfirmed",
+      "review": ""
+    },
+    {
+      "id": 6,
+      "fingerprint": "fce2e00f8e0ea707bf665902ef96a1f760d3e5927bb93c0ec772407d898ad06b",
+      "first_run": 1,
+      "last_run": 2,
+      "seen": 2,
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "rule": "df-permission-check-review",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 153,
+      "snippet": "            int result = checkPermission(permission, source);",
+      "cwe": "CWE-862",
+      "confidence": 0.35,
+      "title": "Review permission check result and caller identity before privileged action",
+      "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+      "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries.",
+      "status": "unconfirmed",
+      "review": ""
+    },
+    {
+      "id": 7,
+      "fingerprint": "cdf8da4ca115ee4a642da5767e8ebaf8811b9ac16886b05ef70e157b8a6dc514",
+      "first_run": 1,
+      "last_run": 2,
+      "seen": 2,
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "rule": "df-permission-check-review",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 169,
+      "snippet": "            int result = checkPermission(permission, pid, uid);",
+      "cwe": "CWE-862",
+      "confidence": 0.35,
+      "title": "Review permission check result and caller identity before privileged action",
+      "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+      "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries.",
+      "status": "unconfirmed",
+      "review": ""
+    },
+    {
+      "id": 8,
+      "fingerprint": "9364c01ea66c44c0f9754164f07722ca91e3b2ddb93aa8e456cf22ed5201cd21",
+      "first_run": 1,
+      "last_run": 2,
+      "seen": 2,
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "rule": "df-permission-check-review",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 180,
+      "snippet": "            int result = checkPermission(permission, source);",
+      "cwe": "CWE-862",
+      "confidence": 0.35,
+      "title": "Review permission check result and caller identity before privileged action",
+      "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+      "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries.",
+      "status": "unconfirmed",
+      "review": ""
+    },
+    {
+      "id": 9,
+      "fingerprint": "2c22448971de8094395e9567e8fab04f4186c5fbf72c8605c30f4586ad54ccd1",
+      "first_run": 1,
+      "last_run": 2,
+      "seen": 2,
+      "repository": "aosp-mirror/platform_frameworks_base",
+      "commit_sha": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+      "rule": "df-permission-check-review",
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "line": 197,
+      "snippet": "            int result = checkPermission(permission, pid, uid);",
+      "cwe": "CWE-862",
+      "confidence": 0.35,
+      "title": "Review permission check result and caller identity before privileged action",
+      "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+      "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries.",
+      "status": "unconfirmed",
+      "review": ""
+    }
+  ],
+  "evidence": [
+    {
+      "id": 1,
+      "created": "2026-10-24T09:53:04.680955+00:00",
+      "kind": "synthetic-validation",
+      "sha256": "43a61700ac4ccd91d7d32f672f496bf1884fb6679238a50d2bcec81da11d091e",
+      "data": {
+        "checks": [
+          {
+            "name": "synthetic missing-enforcement model returns data for denied input",
+            "passed": true
+          },
+          {
+            "name": "patched model denies unprivileged input",
+            "passed": true
+          },
+          {
+            "name": "patched model accepts explicit permission",
+            "passed": true
+          },
+          {
+            "name": "oversized input rejected",
+            "passed": true
+          },
+          {
+            "name": "boundary input accepted",
+            "passed": true
+          },
+          {
+            "name": "structured decoding rejects wrong schema",
+            "passed": true
+          },
+          {
+            "name": "structured decoding accepts expected schema",
+            "passed": true
+          },
+          {
+            "name": "safe logging excludes credential values",
+            "passed": true
+          }
+        ],
+        "independently_validated_aosp": false,
+        "passed": true,
+        "sample_sha256": "c6bf7e83dd9d3fa3b07f7ba0b866d76370f678ced53937b9fd761681cf5f7601",
+        "scope": "synthetic Python models only; NOT validation of an AOSP vulnerability"
+      }
+    },
+    {
+      "id": 2,
+      "created": "2026-10-24T09:53:04.680995+00:00",
+      "kind": "synthetic-logs",
+      "sha256": "5211f4eaf875557f91858bcce0698280e533f9634d1fcfab0b683dc4d88a2ca1",
+      "data": {
+        "events": [
+          {
+            "context": [
+              "SYNTHETIC FIXTURE: contains no device or user data",
+              "==123==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x12345678",
+              "    #0 0x1234 in lab_copy synthetic.cpp:12",
+              "ERROR: HWAddressSanitizer: tag-mismatch on address 0x12345678",
+              "synthetic.cpp:18: runtime error: signed integer overflow",
+              "signal 11 (SIGSEGV), code 1, fault addr 0x12345678",
+              "FATAL EXCEPTION: main"
+            ],
+            "cwe": "CWE-119",
+            "kind": "asan",
+            "limitation": "A crash signature does not establish root cause, reachability, or a vulnerability.",
+            "line": 2,
+            "signature": "22c17900a4bcb2d6c62ad91e1007ecba5286769af7491d3d839665e7ae5a0a67",
+            "status": "unconfirmed",
+            "summary": "==123==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x12345678"
+          },
+          {
+            "context": [
+              "    #0 0x1234 in lab_copy synthetic.cpp:12",
+              "ERROR: HWAddressSanitizer: tag-mismatch on address 0x12345678",
+              "synthetic.cpp:18: runtime error: signed integer overflow",
+              "signal 11 (SIGSEGV), code 1, fault addr 0x12345678",
+              "FATAL EXCEPTION: main",
+              "java.lang.IllegalArgumentException: synthetic fixture"
+            ],
+            "cwe": "CWE-119",
+            "kind": "hwasan",
+            "limitation": "A crash signature does not establish root cause, reachability, or a vulnerability.",
+            "line": 4,
+            "signature": "7bd95cfb6b09424e03d1dde43149dea4a2bdfda341c43b92494c0ded49a3908d",
+            "status": "unconfirmed",
+            "summary": "ERROR: HWAddressSanitizer: tag-mismatch on address 0x12345678"
+          },
+          {
+            "context": [
+              "ERROR: HWAddressSanitizer: tag-mismatch on address 0x12345678",
+              "synthetic.cpp:18: runtime error: signed integer overflow",
+              "signal 11 (SIGSEGV), code 1, fault addr 0x12345678",
+              "FATAL EXCEPTION: main",
+              "java.lang.IllegalArgumentException: synthetic fixture"
+            ],
+            "cwe": "CWE-758",
+            "kind": "ubsan",
+            "limitation": "A crash signature does not establish root cause, reachability, or a vulnerability.",
+            "line": 5,
+            "signature": "0e56abb74b887f7efd95498ccd12523592b123cd384876bae9f03ff6b4407c11",
+            "status": "unconfirmed",
+            "summary": "synthetic.cpp:18: runtime error: signed integer overflow"
+          },
+          {
+            "context": [
+              "synthetic.cpp:18: runtime error: signed integer overflow",
+              "signal 11 (SIGSEGV), code 1, fault addr 0x12345678",
+              "FATAL EXCEPTION: main",
+              "java.lang.IllegalArgumentException: synthetic fixture"
+            ],
+            "cwe": "unclassified",
+            "kind": "android-native",
+            "limitation": "A crash signature does not establish root cause, reachability, or a vulnerability.",
+            "line": 6,
+            "signature": "16afe8c46912a80968d93596a8d0f45d86230b54783283aee6a0e45c7f70fcae",
+            "status": "unconfirmed",
+            "summary": "signal 11 (SIGSEGV), code 1, fault addr 0x12345678"
+          },
+          {
+            "context": [
+              "signal 11 (SIGSEGV), code 1, fault addr 0x12345678",
+              "FATAL EXCEPTION: main",
+              "java.lang.IllegalArgumentException: synthetic fixture"
+            ],
+            "cwe": "unclassified",
+            "kind": "android-java",
+            "limitation": "A crash signature does not establish root cause, reachability, or a vulnerability.",
+            "line": 7,
+            "signature": "9b9538c2a9ec21b52bbc21ae36e9f8c07290f90846b999f5d90c9a83dd646475",
+            "status": "unconfirmed",
+            "summary": "FATAL EXCEPTION: main"
+          },
+          {
+            "context": [
+              "FATAL EXCEPTION: main",
+              "java.lang.IllegalArgumentException: synthetic fixture"
+            ],
+            "cwe": "unclassified",
+            "kind": "android-java",
+            "limitation": "A crash signature does not establish root cause, reachability, or a vulnerability.",
+            "line": 8,
+            "signature": "4d4f73ac91bc7714d1311d23a4b63f68746ff388518c5903a265f22fdd1a7ae5",
+            "status": "unconfirmed",
+            "summary": "java.lang.IllegalArgumentException: synthetic fixture"
+          }
+        ],
+        "sha256": "dd28bd7f843b8e6a86bce49e79e3151e70a9c1806edb48bd146994ae16446bea",
+        "truncated": false
+      }
+    }
+  ]
+}

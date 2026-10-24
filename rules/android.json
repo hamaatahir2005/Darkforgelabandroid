@@ -1,0 +1,49 @@
+{
+  "rules": [
+    {
+      "id": "df-permission-check-review",
+      "languages": ["generic"], "severity": "INFO",
+      "message": "Review permission check result and caller identity before privileged action",
+      "pattern-regex": "(?:checkCallingPermission|checkCallingOrSelfPermission|checkPermission)\\s*\\(",
+      "metadata": {"cwe": "CWE-862", "confidence": 0.35,
+        "hypothesis": "Could a denied result be ignored, or a caller identity be confused? Trace callers and all branches.",
+        "recommendation": "Enforce permission before side effects; reject denied callers and document identity boundaries."}
+    },
+    {
+      "id": "df-exported-interface-review",
+      "languages": ["generic"], "severity": "INFO",
+      "message": "Review explicitly exported component and its permission boundary",
+      "pattern-regex": "android:exported\\s*=\\s*[\"']true[\"']",
+      "metadata": {"cwe": "CWE-926", "confidence": 0.45,
+        "hypothesis": "Can an untrusted caller reach a privileged operation through this exported interface?",
+        "recommendation": "Disable unnecessary exports; otherwise require an appropriate permission and validate callers and input."}
+    },
+    {
+      "id": "df-deserialization-review",
+      "languages": ["generic"], "severity": "WARNING",
+      "message": "Review object deserialization trust boundary and class restrictions",
+      "pattern-regex": "(?:readObject|readSerializable|readParcelable)\\s*\\(",
+      "metadata": {"cwe": "CWE-502", "confidence": 0.5,
+        "hypothesis": "Can untrusted serialized input instantiate unexpected classes or trigger side effects?",
+        "recommendation": "Prefer typed structured data; constrain classes, sizes and sources; reject malformed input."}
+    },
+    {
+      "id": "df-input-length-review",
+      "languages": ["generic"], "severity": "WARNING",
+      "message": "Review input conversion or memory-copy bounds",
+      "pattern-regex": "(?:memcpy|strcpy|System\\.arraycopy|Integer\\.parseInt)\\s*\\(",
+      "metadata": {"cwe": "CWE-20", "confidence": 0.4,
+        "hypothesis": "Can an untrusted length, offset or value exceed the accepted domain before this operation?",
+        "recommendation": "Validate ranges and lengths before use, check arithmetic overflow, and fail closed."}
+    },
+    {
+      "id": "df-sensitive-log-review",
+      "languages": ["generic"], "severity": "WARNING",
+      "message": "Review logging of potentially sensitive variables",
+      "pattern-regex": "(?i)(?:Log\\.[vdiew]|Slog\\.[vdiew]|print|logger\\.(?:info|debug))\\s*\\([^\\n]*(?:token|password|secret|credential)",
+      "metadata": {"cwe": "CWE-532", "confidence": 0.55,
+        "hypothesis": "Does a reachable log statement expose a real secret to a less privileged reader?",
+        "recommendation": "Remove secret values from logs; retain minimal event metadata and redact at the source."}
+    }
+  ]
+}

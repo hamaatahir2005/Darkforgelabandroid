@@ -1,0 +1,8 @@
+SYNTHETIC FIXTURE: contains no device or user data
+==123==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x12345678
+    #0 0x1234 in lab_copy synthetic.cpp:12
+ERROR: HWAddressSanitizer: tag-mismatch on address 0x12345678
+synthetic.cpp:18: runtime error: signed integer overflow
+signal 11 (SIGSEGV), code 1, fault addr 0x12345678
+FATAL EXCEPTION: main
+java.lang.IllegalArgumentException: synthetic fixture

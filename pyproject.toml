@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "darkforge-x"
+version = "0.1.0"
+description = "Bounded, evidence-first Android source security research lab"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+semgrep = ["semgrep>=1.100,<2"]
+pdf = ["reportlab>=4,<5"]
+
+[project.scripts]
+darkforge = "darkforge.cli:main"
+
+[tool.setuptools]
+packages = ["darkforge"]
+
+[tool.setuptools.data-files]
+"share/darkforge/rules" = ["rules/android.json"]
+"share/darkforge/samples" = ["samples/components.py", "samples/ReviewTargets.java", "samples/AndroidManifest.xml", "samples/sanitizer.log"]
+"share/darkforge/vendor/aosp" = ["vendor/aosp/manifest.json"]
+"share/darkforge/vendor/aosp/core/java/android/os" = ["vendor/aosp/core/java/android/os/PermissionEnforcer.java"]
+"share/darkforge/vendor" = ["vendor/NOTICE.md", "vendor/APACHE-2.0.txt"]

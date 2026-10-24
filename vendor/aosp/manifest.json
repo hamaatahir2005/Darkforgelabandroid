@@ -1,0 +1,19 @@
+{
+  "repository": "aosp-mirror/platform_frameworks_base",
+  "canonical_repository": "https://android.googlesource.com/platform/frameworks/base",
+  "component": "core/java/android/os/PermissionEnforcer.java",
+  "commit": "1cdfff555f4a21f71ccc978290e2e212e2f8b168",
+  "acquisition": "GitHub connected read-only tool: branch resolved then file fetched at immutable SHA",
+  "retrieved_at": "2026-10-24",
+  "files": [
+    {
+      "path": "core/java/android/os/PermissionEnforcer.java",
+      "git_blob_sha": "3cc6fb5ad0ef422241a31809dc0f526e953cb46d",
+      "sha256": "eabca7065cb5ca2d8586c95f5ad6095395e9639c096d23f64f51ac871efd93f9"
+    }
+  ],
+  "limitations": [
+    "Single-file source snapshot; dependencies and generated AIDL not included.",
+    "Mirror main commit dated 2025-03-27; not asserted to be latest AOSP or supported Android release."
+  ]
+}

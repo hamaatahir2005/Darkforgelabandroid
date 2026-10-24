@@ -1,0 +1,10 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "git": "/usr/local/bin/git",
+  "semgrep": null,
+  "pdf": "builtin PDF writer available; no dependency needed",
+  "limits": "POSIX wall=60s CPU=45s memory=1536MiB output=16MiB files=128 processes=32",
+  "network": "No connectivity assumed; acquire --online explicitly opts into public source HTTPS",
+  "root": "/workspace/Darkforgelabandroid"
+}

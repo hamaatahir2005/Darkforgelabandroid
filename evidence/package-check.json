@@ -1,0 +1,8 @@
+{
+  "wheel_build": "passed, offline --no-build-isolation --no-deps",
+  "isolated_venv_install": "passed, --no-index local wheel",
+  "console_entrypoint_from_outside_checkout": "passed",
+  "installed_source_hash_verification": "passed",
+  "installed_builtin_scan_hints": 9,
+  "installed_synthetic_validation_passed": true
+}
